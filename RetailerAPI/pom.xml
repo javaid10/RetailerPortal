@@ -1,0 +1,84 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.mora.murabaha</groupId>
+  <artifactId>RetailerAPI</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>RetailerAPI</name>
+  
+  <properties>
+	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	<maven.compiler.source>1.8</maven.compiler.source>
+	<maven.compiler.target>1.8</maven.compiler.target>
+	<maven-compiler-plugin-version>2.3.2</maven-compiler-plugin-version>
+	<middleware-version>9.5.0.0</middleware-version>
+	<dbp.framework.version>2022.04.00</dbp.framework.version>
+	<infinity.commons.version>2020.07.02</infinity.commons.version>
+	<apache.commonslang.version>2.6</apache.commonslang.version>
+  </properties>
+  
+  <dependencies>
+  	<dependency>
+  		<groupId>com.kony.middleware</groupId>
+		<artifactId>middleware-api</artifactId>
+		<version>${middleware-version}</version>
+  	</dependency>
+  	<dependency>
+		<groupId>com.kony.dbp</groupId>
+		<artifactId>DBPFramework</artifactId>
+		<version>${dbp.framework.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>com.temenos.infinity</groupId>
+		<artifactId>infinity-api-commons</artifactId>
+		<version>${infinity.commons.version}</version>
+	</dependency>
+  
+  	<dependency>
+		<groupId>com.google.code.gson</groupId>
+		<artifactId>gson</artifactId>
+		<version>2.6.2</version>
+	</dependency>
+	<dependency>
+		<groupId>org.apache.logging.log4j</groupId>
+		<artifactId>log4j-api</artifactId>
+		<version>2.17.2</version>
+	</dependency>
+	<dependency>
+		<groupId>org.apache.logging.log4j</groupId>
+		<artifactId>log4j-core</artifactId>
+		<version>2.17.2</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+	<dependency>
+	    <groupId>org.apache.commons</groupId>
+	    <artifactId>commons-lang3</artifactId>
+	    <version>3.12.0</version>
+	</dependency>
+	<dependency>
+		<groupId>commons-lang</groupId>
+		<artifactId>commons-lang</artifactId>
+		<version>${apache.commonslang.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>com.kony.dbp</groupId>
+		<artifactId>dbp-commonutilityservices</artifactId>
+		<version>${project.version}</version>
+	</dependency>	
+  </dependencies>
+  
+  <build>
+	<plugins>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+		    <artifactId>maven-compiler-plugin</artifactId>
+		    <version>${maven-compiler-plugin-version}</version>
+		    <configuration>
+		        <source>1.8</source>
+		        <target>1.8</target>
+		    </configuration>
+		</plugin>
+	</plugins>
+	<finalName>ReatilerAPI</finalName>
+  </build>
+	
+</project>
